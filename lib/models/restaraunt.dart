@@ -1,7 +1,6 @@
 
 import 'package:flutter_application_2/models/food.dart';
-
-class Restaraunt {
+class Restaurant {
   String name;
   String waitTime;
   String distance;
@@ -10,5 +9,7 @@ class Restaraunt {
   String desc;
   num score;
   Map<String, List<Food>> menu;
-  Restaraunt(this.name, this.waitTime, this.distance, this.label, this.logoUrl, this.desc, this.menu, this.score)
+  
+  // Добавлено объявление полей как final
+  Restaurant(this.name, this.waitTime, this.distance, this.label, this.logoUrl, this.desc, this.menu, this.score);
 }

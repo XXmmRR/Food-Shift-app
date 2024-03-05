@@ -1,26 +1,27 @@
 class Food {
   String imgUrl;
-  String desk;
+  String desc; // исправлено с desk на desc
   String name;
-  String waittime;
+  String waitTime; // исправлено с waittime на waitTime
   num score;
   String cal;
   num price;
   num quantity;
   List<Map<String, String>> ingredients;
   String about;
-  bool hightLight;
+  bool highlight; // исправлено с hightLight на highlight
 
-
-  Food(this.imgUrl, 
-      this.desk, 
-      this.name, 
-      this.waittime, 
-      this.score, 
-      this.cal, 
-      this.price, 
-      this.quantity, 
-      this.ingredients, 
-      this.about, 
-      this.hightLight)
+  Food(
+    this.imgUrl,
+    this.desc,
+    this.name,
+    this.waitTime,
+    this.score,
+    this.cal,
+    this.price,
+    this.quantity,
+    this.ingredients,
+    this.about,
+    this.highlight,
+  );
 }

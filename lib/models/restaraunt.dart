@@ -1,3 +1,6 @@
+
+import 'package:flutter_application_2/models/food.dart';
+
 class Restaraunt {
   String name;
   String waitTime;

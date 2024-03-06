@@ -5,6 +5,7 @@ import 'package:flutter_application_2/screens/home/widget/restaraunt_info.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
 import 'package:flutter_application_2/models/food.dart';
 
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -13,6 +14,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final pageController = PageController();
   var selected = 0;
     final restaurant = Restaurant(
     'KFC', 
@@ -50,9 +52,21 @@ class _HomePageState extends State<HomePage> {
           FoodList(selected, (int index) {
               setState() {
                 selected = index;
+                pageController.jumpToPage(index)
               }
           }, restaurant
-          )
+          ),
+          Expanded(
+            child: FoodListView(
+              selected,
+              (int index) {
+                setState(() {
+                  selected = index;
+                                  pageController;
+                });
+              }
+            ) 
+            )
         ],
         
       )

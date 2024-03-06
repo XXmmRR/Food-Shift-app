@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/food.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
 
@@ -35,8 +37,9 @@ class RestarauntInfo extends StatelessWidget {
                     restaurant.name, 
                     style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 10,),
+                  const SizedBox(height: 40,),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         padding: EdgeInsets.all(5),
@@ -63,6 +66,7 @@ class RestarauntInfo extends StatelessWidget {
                   ),
                 ],
               ),
+              
               ClipRRect(
                 borderRadius: BorderRadius.circular(50),
                 child: Image.network(restaurant.logoUrl, width: 80,),

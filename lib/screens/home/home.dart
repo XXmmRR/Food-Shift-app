@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
 import 'package:flutter_application_2/screens/home/widget/food_list.dart';
+import 'package:flutter_application_2/screens/home/widget/food_list_view.dart';
 import 'package:flutter_application_2/screens/home/widget/restaraunt_info.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
 import 'package:flutter_application_2/models/food.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
     'desc', 
     {          'Appetizers': [
             Food(
-              'https://example.com/food1.jpg',
+              'https://plus.unsplash.com/premium_photo-1673439304183-8840bd0dc1bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl6emF8ZW58MHx8MHx8fDA%3D',
               'Fresh salad with mixed greens',
               'Salad',
               '10 minutes',
@@ -52,7 +53,7 @@ class _HomePageState extends State<HomePage> {
           FoodList(selected, (int index) {
               setState() {
                 selected = index;
-                pageController.jumpToPage(index)
+                pageController.jumpToPage(index);
               }
           }, restaurant
           ),
@@ -62,9 +63,11 @@ class _HomePageState extends State<HomePage> {
               (int index) {
                 setState(() {
                   selected = index;
-                                  pageController;
+                                  
                 });
-              }
+              },
+              pageController,
+              restaurant
             ) 
             )
         ],

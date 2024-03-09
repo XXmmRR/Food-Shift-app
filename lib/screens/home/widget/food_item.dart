@@ -34,7 +34,7 @@ class FoodItem extends StatelessWidget {
                   SizedBox(height: 5,),
                   Row(
                     children: [
-                      Text('\$', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
+                      Text('${food.price} \$', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),)
                     ],
                     )
                   ],

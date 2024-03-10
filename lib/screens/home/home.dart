@@ -47,6 +47,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(onPressed: () {}, backgroundColor: kPrimaryColor, elevation: 2, child: Icon(Icons.shopping_basket, size: 30, color: Colors.black,,),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

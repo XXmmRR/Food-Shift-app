@@ -65,7 +65,7 @@ class FoodDetail extends StatelessWidget {
                 borderRadius: BorderRadius.circular(40)
               ),
               child: Column(children: [
-                Image.asset(food.ingredients[index].values.first, width: 52,),
+                Image.network(food.ingredients[index].values.first, width: 52,),
                 Text(food.ingredients[index].keys.first)
               ],),
             ), 

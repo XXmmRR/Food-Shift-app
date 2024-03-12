@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               '200',
               5.99,
               1,
-              [],
+              [{'Noodles': 'https://cdn-icons-png.flaticon.com/512/7592/7592287.png'}],
               'A refreshing starter',
               true,
             ),]},

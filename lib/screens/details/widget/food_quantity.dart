@@ -54,8 +54,8 @@ class FoodQuantity extends StatelessWidget {
                     padding: EdgeInsets.all(12),
                     decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.white),
                     child: Text(food.quantity.toString(), style: TextStyle(fontWeight: FontWeight.bold, ),),
-                  )
-                  Text('-', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  ),
+                  Text('+', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 ],
               ),
             ),

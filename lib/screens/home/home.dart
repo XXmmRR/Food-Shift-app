@@ -28,7 +28,7 @@ class _HomePageState extends State<HomePage> {
     'desc', 
     {          'Appetizers': [
             Food(
-              'https://plus.unsplash.com/premium_photo-1673439304183-8840bd0dc1bf?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cGl6emF8ZW58MHx8MHx8fDA%3D',
+              'https://cdn.pixabay.com/photo/2021/08/06/09/09/food-6525694_1280.png',
               'Fresh salad with mixed greens',
               'Salad',
               '10 minutes',
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(onPressed: () {}, backgroundColor: kPrimaryColor, elevation: 2, child: Icon(Icons.shopping_basket, size: 30, color: Colors.black,,),),
+      floatingActionButton: FloatingActionButton(onPressed: () {}, backgroundColor: kPrimaryColor, elevation: 2, child: Icon(Icons.shopping_basket, size: 30, color: Colors.black,),),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -76,9 +76,9 @@ class _HomePageState extends State<HomePage> {
             Container(
               height: 60,
               padding: EdgeInsets.symmetric(horizontal: 25),
-              child: SmoothPageIndicator(controller: pageController, count: restaurant.menu.length
+              child: SmoothPageIndicator(controller: pageController, count: restaurant.menu.length,
               effect: CustomizableEffect(dotDecoration: DotDecoration(width: 8, height: 8, color: Colors.grey.withOpacity(0.5), borderRadius: BorderRadius.circular(8)),
-                                        activeDotDecoration: DotDecoration(width: 10, height: 8, color: kBackground, borderRadius: BorderRadius.circular(10), bord: DotBorder(color: kPrimaryColor, padding: 2, width: 2))),
+                                        activeDotDecoration: DotDecoration(width: 10, height: 8, color: kBackground, borderRadius: BorderRadius.circular(10), dotBorder: DotBorder(color: kPrimaryColor, padding: 2, width: 2))),
               ),
             )
         ],

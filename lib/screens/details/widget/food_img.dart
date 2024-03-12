@@ -21,7 +21,6 @@ class FoodImg extends StatelessWidget {
             flex: 1,
             child: Container(
               decoration: BoxDecoration(borderRadius: BorderRadius.only(topLeft: Radius.circular(50), topRight: Radius.circular(50))),
-              color: kBackground,
             )
             )
           ],),
@@ -29,7 +28,7 @@ class FoodImg extends StatelessWidget {
             alignment: Alignment.center,
             child: Container(
               margin: EdgeInsets.all(5),
-              child: Image.asset(food.imgUrl, fit: BoxFit.cover),
+              child: Image.network(food.imgUrl, fit: BoxFit.cover),
               width: 250,
               height: 250,
               decoration: BoxDecoration(shape: BoxShape.circle, boxShadow: [

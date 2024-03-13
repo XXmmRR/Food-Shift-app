@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/screens/auth/login_screen.dart';
 import 'package:flutter_application_2/screens/home/home.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food Delivery',
-      home: HomePage(),
+      home: MyLogin(),
     );
   }
 }

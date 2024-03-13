@@ -80,7 +80,7 @@ class FoodDetail extends StatelessWidget {
         Text(food.about, style: TextStyle(wordSpacing: 1.2, height: 1.5, fontSize: 16),)
 
       ],),
-
+      
       );
   }
   

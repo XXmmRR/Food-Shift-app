@@ -13,9 +13,9 @@ class FoodQuantity extends StatelessWidget {
       height: 40,
       child: Stack(children: [
           Align(
-            alignment: Alignment(-0.3, 0),  
+            alignment: Alignment(-0.6, 0),  
             child: Container(
-              width: 120,
+              width: 90,
               height: double.maxFinite,
               decoration: BoxDecoration(
                 color: Colors.grey.withOpacity(0.1),
@@ -25,14 +25,14 @@ class FoodQuantity extends StatelessWidget {
               child: Row(
                 children: [
                   SizedBox(
-                    width: 15,
+                    width: 10,
                   ),
                   Text('\$', style: TextStyle(
                     fontSize: 12,
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-                  Text(food.price.toString(), style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),)
+                  Text(food.price.toString(), style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),),
                 ],
               ),
             ),

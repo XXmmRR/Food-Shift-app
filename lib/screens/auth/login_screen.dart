@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/auth/register_screen.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter_application_2/screens/home/home.dart';
@@ -162,7 +163,9 @@ class _MyLoginState extends State<MyLogin> {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, 'register');
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                                        return MyRegister();
+                                      },),);
                                 },
                                 child: Text(
                                   'Sign Up',

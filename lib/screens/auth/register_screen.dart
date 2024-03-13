@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/auth/login_screen.dart';
 
 class MyRegister extends StatefulWidget {
   const MyRegister({Key? key}) : super(key: key);
@@ -144,7 +145,9 @@ class _MyRegisterState extends State<MyRegister> {
                             children: [
                               TextButton(
                                 onPressed: () {
-                                  Navigator.pushNamed(context, 'login');
+                                      Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                                        return MyLogin();
+                                      },),);
                                 },
                                 child: Text(
                                   'Sign In',

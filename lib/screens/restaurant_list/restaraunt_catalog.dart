@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
 import 'package:flutter_application_2/models/tags.dart';
-import 'package:flutter_application_2/screens/home/widget/restaraunt_tags.dart';
+import 'package:flutter_application_2/screens/restaurant_list/restaraunt_tags.dart';
 import 'package:flutter_application_2/screens/restaurant_list/restaurant_item.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
 import 'package:flutter_application_2/models/food.dart';
 import 'package:bottom_nav_layout/bottom_nav_layout.dart';
 import 'package:dots_indicator/dots_indicator.dart';
+import 'package:flutter_application_2/widgets/custom_nav_bar.dart';
 
 class RestaurantCatalog extends StatefulWidget {
   @override
@@ -68,19 +69,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
         elevation: 2,
         child: Icon(Icons.shopping_basket, size: 30, color: Colors.black),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        unselectedItemColor: Colors.grey,
-        selectedItemColor: kPrimaryColor,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.search_outlined), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_basket_outlined), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.all_inbox_outlined), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.person_outline_outlined), label: ''),
-        ],
-      ),
+      bottomNavigationBar: const CustomNavbar(),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

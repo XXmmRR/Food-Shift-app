@@ -3,7 +3,7 @@ import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
 import 'package:flutter_application_2/screens/home/widget/food_list.dart';
 import 'package:flutter_application_2/screens/home/widget/food_list_view.dart';
-import 'package:flutter_application_2/screens/home/widget/restaraunt_info.dart';
+import 'package:flutter_application_2/screens/restaurant_list/restaraunt_info.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
 import 'package:flutter_application_2/models/food.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';

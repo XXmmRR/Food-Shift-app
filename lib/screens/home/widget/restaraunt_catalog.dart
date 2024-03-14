@@ -19,7 +19,7 @@ class RestaurantCatalog extends StatefulWidget {
 class _RestaurantCatalogState extends State<RestaurantCatalog> {
   final PageController pageController = PageController();
   var currentIndex = 0;
-  final List<Tag> tags = [Tag('Fast Food'), Tag('MM Food'), Tag("Beer")];
+  final List<Tag> tags = [Tag('Fast Food'), Tag('MM Food'), Tag("Beer"), Tag('Japanese'), Tag('Ching chong')];
   final List<Restaurant> restaurants = [
     Restaurant(
       'KFC',
@@ -84,15 +84,14 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomAppBar(leftIcon: Icons.arrow_back_ios_new, rightIcon: Icons.search_off_outlined),
-            TagList(0, (){}, tags),
             Container(
-              padding: EdgeInsets.only(top: 10, left: 10, right: 10),
+              padding: EdgeInsets.only(top: 10, left: 17, right: 17),
               child: Column(
                 children: [
                   CarouselSlider(
                     options: CarouselOptions(
                         height: 170.0,
-                        viewportFraction: 1.0,
+                        viewportFraction: 0.9,
                         initialPage: 0,
                         scrollDirection: Axis.horizontal,
                         onPageChanged: (index, reason) {
@@ -118,6 +117,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                       size: Size(10, 10),
                     ),
                   ),
+                
                 ],
               ),
             ),
@@ -129,6 +129,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                     'Restaurants',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black),
                   ),
+                  TagList(0, (){}, tags),
                   Container(
                     height: 500, // Задайте подходящую высоту
                     child: PageView.builder(

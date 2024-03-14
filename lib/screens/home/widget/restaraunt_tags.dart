@@ -16,7 +16,7 @@ class TagList extends StatelessWidget {
       height: 100,
       padding: EdgeInsets.symmetric(vertical: 30),
       child: ListView.separated(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: EdgeInsets.symmetric(horizontal: 0),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => GestureDetector(
           onTap: () => callback(index),

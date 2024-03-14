@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
+import 'package:flutter_application_2/models/tags.dart';
 
-class FoodList extends StatelessWidget {  
+class TagList extends StatelessWidget {  
   final int selected;
   final Function callback;
-  final Restaurant restaurant;
+  final List<Tag> tags;
 
-  FoodList(this.selected, this.callback, this.restaurant);
+  TagList(this.selected, this.callback, this.tags);
 
   @override
   Widget build(BuildContext context) {
-    final category = restaurant.menu.keys.toList();
     return Container(
       height: 100,
       padding: EdgeInsets.symmetric(vertical: 30),
@@ -27,14 +27,14 @@ class FoodList extends StatelessWidget {
             color: selected == index ? kPrimaryColor : Colors.white
           ),
           child: Text(
-            category[index],
+            tags[index].tagName,
             style: TextStyle(fontWeight: FontWeight.bold),
                       ),
           ),
           ), 
 
         separatorBuilder: (_, index) => SizedBox(width: 20,), 
-        itemCount: category.length)
+        itemCount: tags.length)
 
     );
   }

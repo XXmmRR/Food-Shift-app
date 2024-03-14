@@ -19,6 +19,8 @@ class RestaurantCatalog extends StatefulWidget {
 class _RestaurantCatalogState extends State<RestaurantCatalog> {
   final PageController pageController = PageController();
   var currentIndex = 0;
+  var selected = 0;
+
   final List<Tag> tags = [Tag('Fast Food'), Tag('MM Food'), Tag("Beer"), Tag('Japanese'), Tag('Ching chong')];
   final List<Restaurant> restaurants = [
     Restaurant(
@@ -129,7 +131,9 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                     'Restaurants',
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black),
                   ),
-                  TagList(0, (){}, tags),
+                  TagList(selected,  (int index) {
+                 },
+              tags),
                   Container(
                     height: 500, // Задайте подходящую высоту
                     child: PageView.builder(

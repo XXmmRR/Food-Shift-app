@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
-import 'package:flutter_application_2/models/restaraunt.dart';
 import 'package:flutter_application_2/models/tags.dart';
 
 class TagList extends StatelessWidget {  
@@ -16,26 +15,24 @@ class TagList extends StatelessWidget {
       height: 100,
       padding: EdgeInsets.symmetric(vertical: 30),
       child: ListView.separated(
-        padding: EdgeInsets.symmetric(horizontal: 0),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) => GestureDetector(
           onTap: () => callback(index),
           child: Container(
             padding: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
             decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: selected == index ? kPrimaryColor : Colors.white
+              borderRadius: BorderRadius.circular(20),
+              color: selected == index ? kPrimaryColor : Colors.white,
+            ),
+            child: Text(
+              tags[index].tagName,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
           ),
-          child: Text(
-            tags[index].tagName,
-            style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-          ),
-          ), 
-
+        ),
         separatorBuilder: (_, index) => SizedBox(width: 20,), 
-        itemCount: tags.length)
-
+        itemCount: tags.length,
+      ),
     );
   }
-} 
+}

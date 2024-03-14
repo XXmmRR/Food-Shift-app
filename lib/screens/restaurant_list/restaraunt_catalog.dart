@@ -21,7 +21,6 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
   final PageController pageController = PageController();
   var currentIndex = 0;
   var selected = 0;
-
   final List<Tag> tags = [Tag('Fast Food'), Tag('MM Food'), Tag("Beer"), Tag('Japanese'), Tag('Ching chong')];
   final List<Restaurant> restaurants = [
     Restaurant(
@@ -86,9 +85,9 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                         initialPage: 0,
                         scrollDirection: Axis.horizontal,
                         onPageChanged: (index, reason) {
-                          setState(() {
+                          setState() {
                             currentIndex = index;
-                          });
+                          };
                         }),
                     items: itemsList.map((item) {
                       return Container(
@@ -121,16 +120,20 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                     style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold, color: Colors.black),
                   ),
                   TagList(selected,  (int index) {
-                 },
+                    setState(() {
+                      selected = index;
+                    });
+                                     },
               tags),
                   Container(
                     height: 500, // Задайте подходящую высоту
                     child: PageView.builder(
                       controller: pageController,
                       onPageChanged: (index) {
-                        setState(() {
-                          currentIndex = index;
-                        });
+                          setState() {
+                            selected = index;
+                            pageController.jumpToPage(index);
+                          }
                       },
                       itemCount: restaurants.length,
                       itemBuilder: (context, index) => ListView.builder(

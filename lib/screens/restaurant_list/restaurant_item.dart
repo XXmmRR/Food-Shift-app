@@ -52,7 +52,7 @@ class RestarauntItem extends StatelessWidget {
                     ],
                   ),
                   Text(
-                    '${restaurant.distance} \$',
+                    'Distance - ${restaurant.distance}',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],

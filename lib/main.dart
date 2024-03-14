@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(statusBarColor: Colors.transparent)
     );
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food Delivery',
-      home: RestarauntCatalog(),
+      home: RestaurantCatalog(),
     );
   }
 }

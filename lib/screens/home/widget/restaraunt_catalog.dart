@@ -3,6 +3,8 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
+import 'package:flutter_application_2/models/tags.dart';
+import 'package:flutter_application_2/screens/home/widget/restaraunt_tags.dart';
 import 'package:flutter_application_2/screens/restaurant_list/restaurant_item.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
 import 'package:flutter_application_2/models/food.dart';
@@ -17,7 +19,7 @@ class RestaurantCatalog extends StatefulWidget {
 class _RestaurantCatalogState extends State<RestaurantCatalog> {
   final PageController pageController = PageController();
   var currentIndex = 0;
-
+  final List<Tag> tags = [Tag('Fast Food'), Tag('MM Food'), Tag("Beer")];
   final List<Restaurant> restaurants = [
     Restaurant(
       'KFC',
@@ -82,6 +84,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             CustomAppBar(leftIcon: Icons.arrow_back_ios_new, rightIcon: Icons.search_off_outlined),
+            TagList(0, (){}, tags),
             Container(
               padding: EdgeInsets.only(top: 10, left: 10, right: 10),
               child: Column(

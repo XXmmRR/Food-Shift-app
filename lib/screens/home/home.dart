@@ -10,7 +10,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage(Restaurant restaurant, {super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();

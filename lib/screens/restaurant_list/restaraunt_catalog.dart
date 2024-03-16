@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/models/restaraunt.dart';
 import 'package:flutter_application_2/models/tags.dart';
+import 'package:flutter_application_2/screens/home/home.dart';
+import 'package:flutter_application_2/screens/restaurant_list/restaraunt_info.dart';
 import 'package:flutter_application_2/screens/restaurant_list/restaraunt_tags.dart';
 import 'package:flutter_application_2/screens/restaurant_list/restaurant_item.dart';
 import 'package:flutter_application_2/widgets/custom_app_bar.dart';
@@ -139,7 +141,9 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
                       itemBuilder: (context, index) => ListView.builder(
                         itemCount: restaurants.length,
                         itemBuilder: (context, index) => GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  HomePage(restaurants[index])));
+                            },
                           child: RestarauntItem(restaurants[index]),
                         ),
                       ),

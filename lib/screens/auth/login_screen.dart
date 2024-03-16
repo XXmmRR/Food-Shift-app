@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/screens/auth/register_screen.dart';
+import 'package:flutter_application_2/screens/restaurant_list/restaraunt_catalog.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:flutter_application_2/screens/home/home.dart';
@@ -143,7 +144,7 @@ class _MyLoginState extends State<MyLogin> {
                                     color: Colors.white,
                                     onPressed: () {
                                       Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
-                                        return HomePage();
+                                        return RestaurantCatalog();
                                       },),);
                                       login();
                                     },

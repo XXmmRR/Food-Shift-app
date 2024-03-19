@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constants/colors.dart';
 
 class CustomNavbar extends StatelessWidget {
-  const CustomNavbar({super.key});
+  final Function(int)? onTabTapped;
+  const CustomNavbar(this.onTabTapped);
 
   @override
   Widget build(BuildContext context) {
@@ -11,6 +12,7 @@ class CustomNavbar extends StatelessWidget {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         unselectedItemColor: Colors.grey,
+        onTap: onTabTapped,
         selectedItemColor: kPrimaryColor,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: ''),

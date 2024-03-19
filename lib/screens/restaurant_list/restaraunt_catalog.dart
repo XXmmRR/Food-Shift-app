@@ -13,6 +13,7 @@ import 'package:flutter_application_2/models/food.dart';
 import 'package:bottom_nav_layout/bottom_nav_layout.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter_application_2/widgets/custom_nav_bar.dart';
+import 'package:flutter_application_2/widgets/pages.dart';
 
 class RestaurantCatalog extends StatefulWidget {
   @override
@@ -60,6 +61,12 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
     'https://varro.imgix.net/1680600689626.jpg?w=600&h=370&fit=scale&q=65',
     'https://varro.imgix.net/1680600702003.jpg?w=600&h=370&fit=scale&q=65',
   ];
+  int pageindex=0;
+      void onTabTapped(int index) {
+      print(pageindex);
+      setState(() {pageindex = index;});
+      Navigator.of(context).pop(MaterialPageRoute(builder: (context) =>  pages[pageindex]));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +77,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
         elevation: 2,
         child: Icon(Icons.shopping_basket, size: 30, color: Colors.black),
       ),
-      bottomNavigationBar: const CustomNavbar(),
+      bottomNavigationBar:  CustomNavbar(onTabTapped),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

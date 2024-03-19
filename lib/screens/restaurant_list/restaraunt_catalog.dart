@@ -65,7 +65,7 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
       void onTabTapped(int index) {
       print(pageindex);
       setState(() {pageindex = index;});
-      Navigator.of(context).pop(MaterialPageRoute(builder: (context) =>  pages[pageindex]));
+      Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  pages[pageindex]));
   }
 
   @override

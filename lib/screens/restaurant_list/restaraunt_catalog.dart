@@ -82,7 +82,6 @@ class _RestaurantCatalogState extends State<RestaurantCatalog> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomAppBar(leftIcon: Icons.arrow_back_ios_new, rightIcon: Icons.search_off_outlined),
             Container(
               padding: EdgeInsets.only(top: 10, left: 17, right: 17),
               child: Column(

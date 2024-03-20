@@ -24,7 +24,7 @@ class _OrderHistoryState extends State<OrderHistory> {
     return Scaffold(
       body: Center(child: Column(
         children: [
-         CustomAppBar(leftIcon: Icons.arrow_back_ios_new, rightIcon: Icons.search_off_outlined),
+         CustomAppBar(leftIcon: Icons.arrow_back_ios_new),
          Image.network('https://atlas-content-cdn.pixelsquid.com/stock-images/blue-box-5E80Re5-600.jpg', fit: BoxFit.cover,),
          Text('Order history not found')],)),
       bottomNavigationBar: CustomNavbar(onTabTapped),   

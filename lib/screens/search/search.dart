@@ -2,6 +2,7 @@ import 'dart:html';
 
 import 'package:easy_search_bar/easy_search_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/constants/colors.dart';
 import 'package:flutter_application_2/widgets/custom_nav_bar.dart';
 import 'package:flutter_application_2/widgets/pages.dart';
 
@@ -30,7 +31,8 @@ class _SearchWidgetState extends State<SearchWidget> {
     return Scaffold(
           bottomNavigationBar: CustomNavbar(onTabTapped),
           appBar: EasySearchBar(
-          title: Text('Example'),
+          title: Text('Restaraunts'),
+          backgroundColor: kBackground,
           onSearch: (value) => setState(() => searchValue = value) )
 
     );

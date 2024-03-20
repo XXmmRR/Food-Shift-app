@@ -33,8 +33,17 @@ class _SearchWidgetState extends State<SearchWidget> {
           appBar: EasySearchBar(
           title: Text('Restaraunts'),
           backgroundColor: kBackground,
-          onSearch: (value) => setState(() => searchValue = value) )
-
+          onSearch: (value) => setState(() => searchValue = value) ),
+                body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: EdgeInsets.only(top: 30, left: 17, right: 17),
+              child: Text('Popular', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),),
+            )],
+            ),
+    )
     );
   }
 }

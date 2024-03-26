@@ -21,16 +21,32 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Profile'),),
+        appBar: AppBar(title: Text('Profile'), backgroundColor: Colors.white,),
         bottomNavigationBar: CustomNavbar(onTabTapped),   
+        backgroundColor: Color.fromARGB(255, 229, 229, 229),
         body: SettingsList(
-        
+        contentPadding: EdgeInsets.only(top: 5),
+        platform: DevicePlatform.android,
+        lightTheme: SettingsThemeData(
+                dividerColor: Colors.black,
+                
+                settingsListBackground:   Colors.white70,
+                settingsSectionBackground: Colors.white,
+                settingsTileTextColor: Colors.black,
+                tileHighlightColor: Colors.grey,
+                titleTextColor: Colors.black,
+                trailingTextColor: Colors.black,
+                
+                ),
         sections: [
+          
           SettingsSection(
+            
             tiles: [
               SettingsTile(
                 title: const Text('Vlasov Daniil'),
                 description: const Text('+998 91 545 76 70'),
+                backgroundColor: Colors.white,
                 onPressed: (BuildContext context) {},
                 ),
             ],
@@ -40,11 +56,15 @@ class _ProfilePageState extends State<ProfilePage> {
             tiles: [
             SettingsTile(title: 
             Text('Debit cards'),
+            
             leading: Icon(Icons.add_card_sharp),
+            backgroundColor: Colors.white,
+
             ),
             SettingsTile(
               title: Text('My addresses'),
               leading: Icon(Icons.gps_fixed),
+              backgroundColor: Colors.white,
             )
             ]
           ),
@@ -54,14 +74,19 @@ class _ProfilePageState extends State<ProfilePage> {
             SettingsTile(title: 
             Text('Notifications'),
             leading: Icon(Icons.notifications),
+            backgroundColor: Colors.white,
+
             ),
             SettingsTile(
               title: Text('Support service'),
               leading: Icon(Icons.chat),
+              backgroundColor: Colors.white,
             ),
             SettingsTile(
               title: Text('User agreement'), 
               leading: Icon(Icons.list),
+              backgroundColor: Colors.white,
+
             )
             ]
           ),
@@ -71,10 +96,14 @@ class _ProfilePageState extends State<ProfilePage> {
             SettingsTile(
               title: Text('Log out'),
               leading: Icon(Icons.logout),
+                backgroundColor: Colors.white,
+
             ),
             SettingsTile(
               title: Text('Delete account'), 
               leading: Icon(Icons.person_2_sharp),
+                    backgroundColor: Colors.white,
+
             )
 
           ],)

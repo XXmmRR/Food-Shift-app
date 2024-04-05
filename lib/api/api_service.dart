@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:flutter_application_2/constants/api.dart';
 import 'package:http/http.dart' as http;
@@ -76,6 +77,26 @@ class ApiService {
   return jsonDecode(response.body);
   }
 
+
+  Future<String> get_institutions () async {
+  
+  final uri = Uri.parse(ApiConstants.getOrCreateInstituionList);
+  final response = await http.get(uri);
+  return jsonDecode(response.body);
+  }
+
+  Future<String> create_institution (String InstitutionName, String description, String email, String tag_name, Bool is_draft ) async {
+  final uri = Uri.parse(ApiConstants.getOrCreateInstituionList);
+  final response = await http.get(uri);
+  return jsonDecode(response.body);
+  }
+
+  Future<String> set_institution_image () async {
+  
+  final uri = Uri.parse(ApiConstants.getOrCreateInstituionList);
+  final response = await http.get(uri);
+  return jsonDecode(response.body);
+  }
 
 
 
